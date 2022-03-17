@@ -20,14 +20,15 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
-    
+
 var userPass = parseInt(prompt("Choose a length of at least 8 characters and no more than 128 characters"))
 console.log(userPass);
 
 if (isNaN(userPass)) {
 alert ("Must be a number")
-}
+} 
 
+//TODO Ask difference between prompt and alert
 if (userPass < 8) {
     alert ("Must be 8 characters long")
 } 
@@ -36,6 +37,8 @@ console.log("Must be less than 128 characters");
 if (userPass > 128) {
     alert ("Must be less than 128 characters")
 }
+
+//*New variables made to go through new prompts
 
 var hasNum = confirm("Press ok if you want numbers in your password.")
     console.log(hasNum);
@@ -46,11 +49,12 @@ var hasUpper = confirm("Press ok if you want uppercase letters in your password.
 var hasLower = confirm("Press ok if you want lowercase letters in your password.")
     console.log(hasLower);
 
-var hasSymbols = confirm("Press ok if yo want to have symbols in your password.")
+var hasSymbols = confirm("Press ok if you want to have symbols in your password.")
     console.log(hasSymbols);
 
+//*Must select one of the criteria if selected false for all of the prompts
 if (hasNum === false && hasUpper === false && hasLower === false && hasSymbols === false) {
-    alert ("Must meet one of the criteria")    
-} 
+    alert ("Must meet one of the criteria")
+    } 
 
 }
